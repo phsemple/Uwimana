@@ -36,7 +36,7 @@ h1{
 
 main::before {
   content: '';
-  background-image: url("./images/Landscape.jpeg");
+  background-image: url("images/Landscape.jpeg");
   position: absolute;
   top: 0;
   left: 0;
