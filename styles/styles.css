@@ -2,57 +2,60 @@
 *:before,
 *:after {
   /* border:1px solid red; */
+  margin:0;
+  padding:0;
+ box-sizing:border-box;
 }
 
 html, body {
-  box-sizing: border-box;
-  font-size:1.25rem;
-  line-height: 1.5;
-  margin-left: 1rem;
+  box-sizing: inherit;
+  font-size:1rem;
+  line-height: 1.7;
   padding:.5rem;
+
 }
 
-/* Set the background image for the main container */
 main {
-    background-image: url('images/Landscape.jpeg');
-    background-size: cover; /* Makes the image cover the entire background */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents repeating of the background image */
-    padding: 2rem; /* Add some padding to make space around the table */
-    max-width: 100%; /* Ensures the main container doesn't exceed the viewport */
-    min-height: 100vh; /* Makes sure the main element covers the full height of the viewport */
+  position:relative;
+  z-index:1;
+  height:100vh;
+  text-align:center;
+  font-size: 1.5rem
 }
 
-caption {
-  font-size: 1.5rem;
-  font-weight: 700;
+/* main::before{
+  background-image: url("/images/Landscape.jpeg");
+  height:100vh;
+  width:100wh;
+  background-size:cover;
+} */
+
+h1{
+  text-align:center;
 }
 
-table {
-   background-color: rgba(255, 255, 255, 0.8);
-  width:auto;
-  border-collapse: collapse;
+main::before {
+  content: '';
+  background-image: url("/images/Landscape.jpeg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  z-index:-1;
+  opacity:.12;
 }
 
-td a {
+a {
   text-decoration: none;
+  color:black;
+  display: block;
+  position:relative;
+  margin: .5rem 0 0 1rem;
 }
 
-/* Style the table so it doesn't block the background image */
-#links {
-    background-color: rgba(255, 255, 255, 0.8); /* Adds a semi-transparent background */
-    margin: 0 auto;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    width: 80%; /* Adjust the width of the table */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the table */
-}
-
-#links a {
-    color: #333;
-    text-decoration: none;
-}
-
-#links a:hover {
-    text-decoration: underline;
+span:hover {
+  cursor: pointer;
+  background-color: rgba(214, 187, 92, 0.278);
 }
