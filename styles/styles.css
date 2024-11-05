@@ -1,26 +1,26 @@
 *,
 *:before,
 *:after {
-  /* border:1px solid red; */
+
   margin:0;
   padding:0;
- box-sizing:border-box;
+   box-sizing:border-box;
+   /* border: 1px solid red; */
 }
 
 html, body {
   box-sizing: inherit;
   font-size:1rem;
   line-height: 1.7;
-  padding:.5rem;
 
 }
 
 main {
   position:relative;
   z-index:1;
-  height:100vh;
+  height:100%;
   text-align:center;
-  font-size: 2rem
+  font-size: 2rem;
 }
 
 /* main::before{
@@ -37,14 +37,14 @@ h1{
 main::before {
   content: '';
   background-image: url("../images/Landscape.jpeg");
+  background-size:cover;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-size: cover;
   z-index:-1;
-  opacity:.12;
+  opacity:.2;
 }
 
 a {
@@ -59,3 +59,47 @@ span:hover {
   cursor: pointer;
   background-color: rgba(214, 187, 92, 0.278);
 }
+
+.soccer {
+   width:  40%;
+   margin: 0 auto;
+
+   transition: all .2sec;
+   
+  }
+  
+  .soccer__link {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .soccer__text {
+      /* text-shadow: 2rem 2rem 3rem orangered; */
+      box-shadow: 0 .5rem 1rem grey;
+      padding: 0 .75rem;
+      border-radius: 4px;
+      background-color: rgba(239, 239, 226, 0.76);
+
+  }
+
+  .soccer__text:hover {
+    transform: scale(1.1);
+  }
+
+  .soccer__text:active {
+    transform: scale(.9);
+    box-shadow: 0 0 1rem grey;
+  }
+
+  .soccer__image {
+  width: 8rem;
+  margin: .5rem 0;
+  box-shadow: 0 1rem 3rem black;
+}
+
+.soccer__image:hover {
+   transform: scale(1.2);
+}
+
