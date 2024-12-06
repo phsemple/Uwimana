@@ -1,0 +1,56 @@
+*,
+*:before,
+*:after {
+
+  margin:0;
+  padding:0;
+   box-sizing:border-box;
+   /* border: 1px solid red; */
+}
+
+html, body {
+  box-sizing: inherit;
+  font-size:1;
+  line-height: 1.7;
+  height: 100%;
+
+}
+body::before {
+    content: '';
+    background-image: url("../images/Landscape.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+main {
+  padding: 0 5rem;
+  font-size: 2.5rem;
+}
+
+h1{
+  text-align:center;
+}
+
+
+a {
+  max-width: max-content;
+  text-decoration: none;
+  color:black;
+  display: block;
+  /* position:relative; */
+  margin: .5rem 0 0 1rem;
+  transition: all .2s;
+}
+
+a:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: rgba(214, 187, 92, 0.278);
+}
+
