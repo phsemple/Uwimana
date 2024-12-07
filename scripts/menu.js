@@ -1,3 +1,5 @@
+// Handle the sublists events
+
 document.querySelectorAll('.main-menu li').forEach(item => {
     item.addEventListener('focus', showSublist);
     item.addEventListener('click', showSublist);

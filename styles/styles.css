@@ -33,6 +33,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
+h1 {
+    margin-left: 2rem;
+    font-size: 3rem;
+    padding:2rem 1rem 1rem 1rem;
+}
+
 .container {
     display: flex;
     width: 100%;
@@ -40,22 +46,24 @@ body {
 }
 
 .main-menu {
+    font-size: 1.5rem;
     list-style: none;
     padding: 20px;
     margin: 0;
-    width: 15%;
+    width: max-content;
     background-color: transparent;
-    border-right: 1px solid #ccc;
+    border-right: 3px solid #b0b0b0;
 }
 
 .main-menu li {
-    padding: 10px;
+    padding: 10px 3rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.main-menu li:focus {
-    background-color: #ddd;
+.main-menu li:focus,
+.main-menu li:active {
+    background-color: #948f8f;
     outline: none;
 }
 
@@ -65,16 +73,24 @@ body {
 }
 
 .sublist {
+    font-size: 1.75rem;
+    color: rgb(123, 122, 122);
     list-style: none;
     padding: 20px;
     margin: 0;
     display: none; /* Initially hide all sublists */
-    width: 20%;
+    width: max-content;
+
 }
 
 .sublist li {
+  
     padding: 10px;
-    /* border-bottKpom: 1px solid #ccc; */
+}
+.sublist a {
+    font-size: 1.75rem;
+    color: rgb(53, 53, 53);
+    text-decoration: none;
 }
 
 .sublist.active {
