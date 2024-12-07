@@ -93,6 +93,12 @@ h1 {
     text-decoration: none;
 }
 
+.sublist a:hover {
+    font-size: 1.75rem;
+    color: rgb(192, 110, 28);
+    text-decoration: none;
+}
+
 .sublist.active {
     display: block; /* Show active sublist */
 }
