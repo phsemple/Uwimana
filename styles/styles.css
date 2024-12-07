@@ -15,6 +15,7 @@ html, body {
   height: 100%;
 
 }
+
 body::before {
     content: '';
     background-image: url("../images/Landscape.jpeg");
@@ -28,29 +29,76 @@ body::before {
     opacity: 0.2;
 }
 
-main {
-  padding: 0 5rem;
-  font-size: 2.5rem;
+body {
+    font-family: Arial, sans-serif;
 }
 
-h1{
-  text-align:center;
+h1 {
+    margin-left: 2rem;
+    font-size: 3rem;
+    padding:2rem 1rem 1rem 1rem;
 }
 
-
-a {
-  max-width: max-content;
-  text-decoration: none;
-  color:black;
-  display: block;
-  /* position:relative; */
-  margin: .5rem 0 0 1rem;
-  transition: all .2s;
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
 }
 
-a:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  background-color: rgba(214, 187, 92, 0.278);
+.main-menu {
+    font-size: 1.5rem;
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    width: max-content;
+    background-color: transparent;
+    border-right: 3px solid #b0b0b0;
 }
 
+.main-menu li {
+    padding: 10px 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-menu li:focus,
+.main-menu li:active {
+    background-color: #948f8f;
+    outline: none;
+}
+
+.main-menu li:hover {
+    background-color: #684343;
+    outline: none;
+}
+
+.sublist {
+    font-size: 1.75rem;
+    color: rgb(123, 122, 122);
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    display: none; /* Initially hide all sublists */
+    width: max-content;
+
+}
+
+.sublist li {
+  
+    padding: 10px;
+}
+.sublist a {
+    font-size: 1.75rem;
+    color: rgb(53, 53, 53);
+    text-decoration: none;
+}
+
+.sublist a:hover {
+    font-size: 1.75rem;
+    color: rgb(192, 110, 28);
+    text-decoration: none;
+}
+
+.sublist.active {
+    display: block; /* Show active sublist */
+}
